@@ -41,8 +41,7 @@ public abstract class MixinScreen {
     /**
      * Handle user chat messages
      *
-     * @param message chat message by client user
-     * @param callbackInfo callback
+     * @param message chats message by client user
      */
     @Inject(method = "sendMessage(Ljava/lang/String;)V", at = @At("HEAD"), cancellable = true)
     private void handleChatMessage(String message, CallbackInfo callbackInfo) {
